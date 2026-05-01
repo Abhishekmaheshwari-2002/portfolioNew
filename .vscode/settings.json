@@ -1,0 +1,30 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "spring-boot.ls.problem.application-properties.UNKNOWN_PROPERTY_KEY": "WARNING",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.rulers": [120],
+  "files.exclude": {
+    "**/target": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "maven.executable.preferMavenWrapper": true,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

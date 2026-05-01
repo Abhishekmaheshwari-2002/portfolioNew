@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Alex Johnson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ─── NAVIGATION ─────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">{</span>AJ<span class="logo-bracket">}</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="nav-hire-btn" onclick="scrollToSection('contact')">Hire Me</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ─── HERO ───────────────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for New opportunities</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-line" data-text="Building">Building</span>
+        <span class="hero-line italic">scalable</span>
+        <span class="hero-line">systems</span>
+      </h1>
+
+      <p class="hero-subtitle" id="heroSubtitle">Loading...</p>
+
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="scrollToSection('projects')">
+          View My Work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+        <button class="btn-secondary" onclick="scrollToSection('contact')">
+          Get In Touch
+        </button>
+      </div>
+
+      <div class="hero-stats" id="heroStats">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ──────────────────────────────────────────────────────── -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 / About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar">
+            <div class="avatar-initials" id="avatarInitials">AJ</div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring-2"></div>
+          </div>
+          <div class="about-social" id="aboutSocial"><!-- loaded via JS --></div>
+        </div>
+
+        <div class="about-text">
+          <p class="about-bio" id="aboutBio">Loading...</p>
+          <div class="about-details" id="aboutDetails"><!-- loaded via JS --></div>
+          <a class="btn-outline" href="/resume.pdf" download>
+            Download Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─────────────────────────────────────────────────────── -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 / Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+
+      <div class="skills-filter" id="skillsFilter">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Backend">Backend</button>
+        <button class="filter-btn" data-filter="Frontend">Frontend</button>
+        <button class="filter-btn" data-filter="Database">Database</button>
+        <button class="filter-btn" data-filter="DevOps">DevOps</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ───────────────────────────────────────────────────── -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 / Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+
+      <div class="projects-filter" id="projectsFilter">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Backend">Backend</button>
+        <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+        <button class="filter-btn" data-filter="DevOps">DevOps</button>
+        <button class="filter-btn" data-filter="FinTech">FinTech</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─────────────────────────────────────────────────── -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 / Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ────────────────────────────────────────────────────── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">05 / Contact</span>
+        <h2 class="section-title">Let's Build Something</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">Have a project in mind or want to discuss opportunities? I'm always open to
+            interesting conversations.</p>
+          <div class="contact-links" id="contactLinks"><!-- loaded via JS --></div>
+        </div>
+
+        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">{</span>AJ<span class="logo-bracket">}</span>
+      </div>
+      <p class="footer-copy">© 2024 Alex Johnson · Built with Java + Spring Boot</p>
+      <div class="footer-links">
+        <a href="#home" onclick="scrollToTop()">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
